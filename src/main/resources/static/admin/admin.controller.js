@@ -61,6 +61,7 @@
 
 			self.closeProductModal = () => {
 			    self.product = {};
+			    self.file = null;
                 self.showAddProductErrorMessage = false;
 			    $('#addProductModal').modal('hide');
 			}
