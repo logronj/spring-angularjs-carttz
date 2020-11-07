@@ -59,6 +59,15 @@ public class Product extends BaseModel {
 		this.category = category;
 	}
 
+	public Product(String title, String description, double price, int quantity, Category category, byte[] photo) {
+		this.title = title;
+		this.description = description;
+		this.price = price;
+		this.quantity = quantity;
+		this.category = category;
+		this.photo = photo;
+	}
+
 	public Long getProductId() {
 		return productId;
 	}

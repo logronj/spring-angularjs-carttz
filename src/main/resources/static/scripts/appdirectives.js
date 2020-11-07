@@ -63,9 +63,6 @@
 						case 'tel':
 							element.attr('ui-mask', '(99) 999-9999');
 							break;
-						case 'tin':
-							element.attr('ui-mask', '999-999-999');
-							break;
 						case 'mobile':
 							element.attr('ui-mask', '999-999-99999');
 							break;
@@ -77,9 +74,6 @@
 							break;
 						case 'ipAd':
 							element.attr('ui-mask', '999.999.999.999');
-							break;
-						case 'branchCode':
-							element.attr('ui-mask', 'F9999');
 							break;
 						case 'year':
 							element.attr('ui-mask', '9999');
@@ -224,9 +218,8 @@
 								scope.$apply();
 							} else {
 								scope.file = 'invalid';
-								console.log('file more than 2mb');
+								alert('Invalid! File should not be more than 2mb');
 								scope.$root.showUploadSgnErrorMessage = true;
-								// ctrl.$setValidity('extension', false)
 								scope.$apply();
 							}
 

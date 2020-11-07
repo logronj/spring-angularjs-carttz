@@ -1,15 +1,12 @@
 package com.mycart.service;
 
 import java.io.IOException;
-import java.time.LocalDateTime;
 import java.util.List;
 
-import com.mycart.exceptions.TitleAlreadyExistException;
-import org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededException;
+import com.mycart.exceptions.AlreadyExistException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
@@ -35,7 +32,7 @@ public class ProductServiceImpl implements ProductService {
 	public Product insert(MultipartFile file, ProductRequestWrapper productWrapper) throws IOException {
 		LOGGER.debug("Saving file: ", file.getOriginalFilename());
 
-		if (isExist(productWrapper.getTitle())) throw new TitleAlreadyExistException("Product Already Exist");
+		if (isExist(productWrapper.getTitle())) throw new AlreadyExistException("Product Already Exist");
 
 		var product = buildProduct(file, productWrapper);
 		try {
@@ -47,15 +44,9 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	private Product buildProduct(MultipartFile file, ProductRequestWrapper productWrapper) throws IOException {
-		var product = new Product();
-		var category = new Category();
-		product.setTitle(productWrapper.getTitle());
-		product.setDescription(productWrapper.getDescription());
-		product.setPrice(productWrapper.getPrice());
-		product.setQuantity(productWrapper.getQuantity());
-		category.setCategoryId(productWrapper.getCategory());
-		product.setCategory(category);
-		product.setPhoto(file.getBytes());
+		var category = new Category(productWrapper.getCategory());
+		var product = new Product(productWrapper.getTitle(),productWrapper.getDescription(),productWrapper.getPrice(),
+				productWrapper.getQuantity(),category,file.getBytes());
 		return product;
 	}
 

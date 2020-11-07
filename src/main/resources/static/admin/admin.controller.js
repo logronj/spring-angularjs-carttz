@@ -7,6 +7,7 @@
 			self.product = {};
 			self.showAddCategoryErrorMessage = false;
 			self.showAddProductErrorMessage = false;
+			const invalid = 'invalid';
 
 			self.getCategories = () =>{
 				 AdminServices.getCategories().then(function(response){
@@ -20,6 +21,7 @@
 			self.saveCategory = () => {
 				if (addCategoryValid()) {
 					AdminServices.saveCategory(self.category).then(function (response) {
+                        self.closeCategoryModal();
 						Utilities.popSuccess('Successfully saved Category');
 					}).catch(function (e) {
 						Utilities.popError(e.data.message);
@@ -32,6 +34,7 @@
 			self.saveProduct = () => {
 				if (addProductValid()) {
 					AdminServices.saveProduct(self.file,self.product).then(function (response) {
+					    self.closeProductModal();
 						Utilities.popSuccess('successfully saved Product');
 					}).catch(function (e) {
 						Utilities.popError(e.data.message);
@@ -42,18 +45,30 @@
 			}
 
 			const addCategoryValid = () => {
-				return !($rootScope.dataIsNullOrEmpty(self.category.title)
-					&& $rootScope.dataIsNullOrEmpty(self.category.description));
+				return (!$rootScope.dataIsNullOrEmpty(self.category.title)
+					&& !$rootScope.dataIsNullOrEmpty(self.category.description));
 			}
 
 			const addProductValid = () => {
-				return !($rootScope.dataIsNullOrEmpty(self.product.title)
-					&& $rootScope.dataIsNullOrEmpty(self.product.description)
-					&& $rootScope.dataIsNullOrEmpty(self.product.quantity)
-					&& $rootScope.dataIsNullOrEmpty(self.product.price)
-					&& $rootScope.dataIsNullOrEmpty(self.product.category)
-					&& $rootScope.dataIsNullOrEmpty(self.file)
-					&& self.file != 'invalid');
+				return (!$rootScope.dataIsNullOrEmpty(self.product.title)
+					&& !$rootScope.dataIsNullOrEmpty(self.product.description)
+					&& !$rootScope.dataIsNullOrEmpty(self.product.quantity)
+					&& !$rootScope.dataIsNullOrEmpty(self.product.price)
+					&& !$rootScope.dataIsNullOrEmpty(self.product.category)
+					&& !$rootScope.dataIsNullOrEmpty(self.file)
+					&& self.file != invalid);
+			}
+
+			self.closeProductModal = () => {
+			    self.product = {};
+                self.showAddProductErrorMessage = false;
+			    $('#addProductModal').modal('hide');
+			}
+
+			self.closeCategoryModal = () => {
+			    self.category = {};
+			    self.showAddCategoryErrorMessage = false;
+			    $('#addCategoryModal').modal('hide');
 			}
 
 		}]);

@@ -25,8 +25,6 @@ public class ApiErrorDetail {
 		this.message = message;
 	}
 
-
-
 	public ApiErrorDetail(HttpStatus status, String message) {
 		super();
 		this.status = status;

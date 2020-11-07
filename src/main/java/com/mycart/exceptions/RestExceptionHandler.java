@@ -9,8 +9,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @RestControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
-	@ExceptionHandler(TitleAlreadyExistException.class)
-	public ResponseEntity<Object> handleTitleAlreadyExistException(TitleAlreadyExistException ex) {
+	@ExceptionHandler(AlreadyExistException.class)
+	public ResponseEntity<Object> handleTitleAlreadyExistException(AlreadyExistException ex) {
 		ApiErrorDetail apiErrorDetail = new ApiErrorDetail();
 		apiErrorDetail.setMessage(ex.getUserMessage());
 		apiErrorDetail.setStatus(HttpStatus.UNPROCESSABLE_ENTITY);

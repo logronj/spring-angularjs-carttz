@@ -26,6 +26,10 @@ public class Category extends BaseModel{
 		super();
 	}
 
+	public Category(Long categoryId) {
+		this.categoryId = categoryId;
+	}
+
 	public Category(Long categoryId, String title, String description) {
 		super();
 		this.categoryId = categoryId;

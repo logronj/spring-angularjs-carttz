@@ -27,7 +27,7 @@
         <div class="col-md-12">
           <div class="form-group" ng-class="(adminCtrl.showAddProductErrorMessage 
         && dataIsNullOrEmpty(adminCtrl.product.description) ? 'has-error': '')">
-            <label for="description">Description</label> <textarea type="text" class="form-control" name="description"
+            <label id="description" for="description">Description</label> <textarea type="text" class="form-control" name="description"
               maxlength="30" ng-model="adminCtrl.product.description" required capitalize></textarea>
             <div class="row p-md-0 m-md-0 element-error-message">
               <ul class="p-md-0 m-md-0">
@@ -42,7 +42,7 @@
           <div class="col-md-6">
             <div class="form-group" ng-class="(adminCtrl.showAddProductErrorMessage 
             && dataIsNullOrEmpty(adminCtrl.product.quantity) ? 'has-error': '')">
-              <label for="quantity">Quantity</label>
+              <label id="quantity" for="quantity">Quantity</label>
               <input type="number" class="form-control" name="quantity" ng-model="adminCtrl.product.quantity" required
                 maxlength="10">
               <div class="row p-md-0 m-md-0 element-error-message">
@@ -122,8 +122,8 @@
         <!-- End Modal Body -->
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" ng-click="adminCtrl.saveProduct()" data-dismiss="modal">Save changes</button>
+        <button type="button" class="btn btn-secondary" ng-click="adminCtrl.closeProductModal()">Close</button>
+        <button type="button" class="btn btn-primary" ng-click="adminCtrl.saveProduct()">Save changes</button>
       </div>
     </div>
   </div>

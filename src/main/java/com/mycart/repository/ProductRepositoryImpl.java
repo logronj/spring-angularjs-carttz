@@ -44,7 +44,8 @@ public class ProductRepositoryImpl implements ProductRepository {
 
 	@Override
 	public boolean isExist(String title) {
-		String query = "Select CASE when(count(a) > 0) then true else false END from Product a WHERE a.title = ?1";
+		String query = "Select CASE when(count(a) > 0) then true else false END from Product a " +
+				"WHERE UPPER(a.title) = UPPER(?1)";
 		TypedQuery<Boolean> typedQuery = entityManager.createQuery(query,Boolean.class);
 		typedQuery.setParameter(1,title);
 		return typedQuery.getSingleResult();

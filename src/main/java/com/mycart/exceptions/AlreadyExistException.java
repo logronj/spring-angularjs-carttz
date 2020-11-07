@@ -1,11 +1,11 @@
 package com.mycart.exceptions;
 
-public class TitleAlreadyExistException extends RuntimeException {
+public class AlreadyExistException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
-
 	private String userMessage;
-	public TitleAlreadyExistException(String message) {
+
+	public AlreadyExistException(String message) {
 		this.userMessage = message;
 	}
 

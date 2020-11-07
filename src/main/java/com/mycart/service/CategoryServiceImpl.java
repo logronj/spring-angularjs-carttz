@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.mycart.exceptions.TitleAlreadyExistException;
+import com.mycart.exceptions.AlreadyExistException;
 import com.mycart.model.Category;
 import com.mycart.repository.CategoryRepository;
 
@@ -21,7 +21,7 @@ public class CategoryServiceImpl implements CategoryService {
 	@Override
 	@Transactional
 	public Category insert(Category entity) {
-		if(isExist(entity.getTitle())) throw new TitleAlreadyExistException("Category Already Exist");
+		if(isExist(entity.getTitle())) throw new AlreadyExistException("Category Already Exist");
 		return categoryRepository.insert(entity);
 	}
 
