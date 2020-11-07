@@ -1,0 +1,101 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "keycloak-js@^4.2.1",
+        "scope": null,
+        "escapedName": "keycloak-js",
+        "name": "keycloak-js",
+        "rawSpec": "^4.2.1",
+        "spec": ">=4.2.1 <5.0.0",
+        "type": "range"
+      },
+      "C:\\ETISREPO\\sysad\\sysad-angular"
+    ]
+  ],
+  "_from": "keycloak-js@>=4.2.1 <5.0.0",
+  "_id": "keycloak-js@4.2.1",
+  "_inCache": true,
+  "_location": "/keycloak-js",
+  "_nodeVersion": "4.2.6",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/keycloak-js_4.2.1_1533271825108_0.6213164196168339"
+  },
+  "_npmUser": {
+    "name": "keycloak.bot",
+    "email": "keycloak.bot@gmail.com"
+  },
+  "_npmVersion": "3.5.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "keycloak-js@^4.2.1",
+    "scope": null,
+    "escapedName": "keycloak-js",
+    "name": "keycloak-js",
+    "rawSpec": "^4.2.1",
+    "spec": ">=4.2.1 <5.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/keycloak-js/-/keycloak-js-4.2.1.tgz",
+  "_shasum": "1cae6860b601cccf814fde5e15c7e8d80bcf1bea",
+  "_shrinkwrap": null,
+  "_spec": "keycloak-js@^4.2.1",
+  "_where": "C:\\ETISREPO\\sysad\\sysad-angular",
+  "author": {
+    "name": "Keycloak"
+  },
+  "bugs": {
+    "url": "https://github.com/keycloak/keycloak-js-bower/issues"
+  },
+  "dependencies": {},
+  "description": "Keycloak Adapter",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "1cae6860b601cccf814fde5e15c7e8d80bcf1bea",
+    "tarball": "https://registry.npmjs.org/keycloak-js/-/keycloak-js-4.2.1.tgz",
+    "fileCount": 24,
+    "unpackedSize": 250006
+  },
+  "gitHead": "a518ffe8dbc286b43082e81e53be872d7bdd8a08",
+  "homepage": "https://github.com/keycloak/keycloak-js-bower",
+  "keywords": [
+    "keycloak",
+    "sso",
+    "oauth",
+    "oauth2",
+    "authentication"
+  ],
+  "license": "Apache-2.0",
+  "main": "dist/keycloak.js",
+  "maintainers": [
+    {
+      "name": "keycloak-user",
+      "email": "stian@redhat.com"
+    },
+    {
+      "name": "keycloak.bot",
+      "email": "keycloak.bot@gmail.com"
+    },
+    {
+      "name": "stianst",
+      "email": "stianst@gmail.com"
+    }
+  ],
+  "name": "keycloak-js",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keycloak/keycloak-js-bower.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "typings": "dist/keycloak.d.ts",
+  "version": "4.2.1"
+}

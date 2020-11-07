@@ -1,0 +1,35 @@
+<div class="pl-4 pt-4">
+    <div class="col-md-12 row">
+        <div class="form-group col-md-2">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active">
+                    Categories
+                </a>
+                <div ng-repeat="x in categoriesCtrl.categories">
+                    <a class="list-group-item list-group-item-action" ng-click="categoriesCtrl.getProducts(x.categoryId)">{{x.title}}</a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class=" form-group col-md-8" id="webContent" ui-view></div> -->
+        <div class="form-group col-md-8">
+            <div class="card-deck">
+                <div ng-repeat="y in categoriesCtrl.products">
+                    <div class="card">
+                        <!-- <img file-preview="y.photo" height="100px"> -->
+                        <img class="card-img-top" style="width:18rem;" alt="{{y.title}}" ng-src="data:image/jpeg;base64,{{y.photo}}"
+                            height="100px">
+                        <div class="card-body">
+                            <h5 class="card-title">{{y.title}}</h5>
+                            <p class="card-text">{{y.description}}</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

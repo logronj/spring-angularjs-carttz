@@ -1,0 +1,151 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ng-image-input-with-preview@^1.0.0",
+        "scope": null,
+        "escapedName": "ng-image-input-with-preview",
+        "name": "ng-image-input-with-preview",
+        "rawSpec": "^1.0.0",
+        "spec": ">=1.0.0 <2.0.0",
+        "type": "range"
+      },
+      "C:\\ETISREPO\\sysad\\sysad-angular"
+    ]
+  ],
+  "_from": "ng-image-input-with-preview@>=1.0.0 <2.0.0",
+  "_id": "ng-image-input-with-preview@1.0.0",
+  "_inCache": true,
+  "_location": "/ng-image-input-with-preview",
+  "_nodeVersion": "8.11.3",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/ng-image-input-with-preview_1.0.0_1530520513684_0.9051797773442529"
+  },
+  "_npmUser": {
+    "name": "deiwin",
+    "email": "deiwin.sarjas@gmail.com"
+  },
+  "_npmVersion": "5.6.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ng-image-input-with-preview@^1.0.0",
+    "scope": null,
+    "escapedName": "ng-image-input-with-preview",
+    "name": "ng-image-input-with-preview",
+    "rawSpec": "^1.0.0",
+    "spec": ">=1.0.0 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ng-image-input-with-preview/-/ng-image-input-with-preview-1.0.0.tgz",
+  "_shasum": "4139ea7f77c1d72cef25f6d0be9aed547cf784f2",
+  "_shrinkwrap": null,
+  "_spec": "ng-image-input-with-preview@^1.0.0",
+  "_where": "C:\\ETISREPO\\sysad\\sysad-angular",
+  "author": {
+    "name": "Deiwin Sarjas",
+    "email": "deiwin.sarjas@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/deiwin/ngImageInputWithPreview/issues"
+  },
+  "contributors": [
+    {
+      "name": "Unknown",
+      "email": "krokofant@users.noreply.github.com"
+    },
+    {
+      "name": "Deiwin Sarjas",
+      "email": "deiwin@salemove.com"
+    },
+    {
+      "name": "HormCZ",
+      "email": "horak@horm.cz"
+    },
+    {
+      "name": "Jakub Knejzlík",
+      "email": "jakub.knejzlik@gmail.com"
+    }
+  ],
+  "dependencies": {},
+  "description": "A FileReader based directive to easily preview and upload image files.",
+  "devDependencies": {
+    "angular": "~1.7.2",
+    "angular-mocks": "~1.7.2",
+    "coffee-script": "~1.12.7",
+    "connect-less": "^0.3.1",
+    "glob": "~7.1.2",
+    "grunt": "~1.0.3",
+    "grunt-bump": "0.8.0",
+    "grunt-cli": "~1.2.0",
+    "grunt-contrib-concat": "~1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-jshint": "~1.1.0",
+    "grunt-contrib-less": "~2.0.0",
+    "grunt-contrib-uglify": "~3.3.0",
+    "grunt-contrib-watch": "~1.1.0",
+    "grunt-coveralls": "^2.0.0",
+    "grunt-karma": "~2.0.0",
+    "grunt-ng-annotate": "^3.0.0",
+    "grunt-npm": "https://github.com/Xiphe/grunt-npm/tarball/98187270151e53d45214d778de394a557e81958c",
+    "grunt-parallel": "^0.5.1",
+    "grunt-shell": "~2.1.0",
+    "jasmine-core": "^3.1.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "karma": "~2.0.4",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coffee-preprocessor": "~1.0.1",
+    "karma-coverage": "^1.1.2",
+    "karma-firefox-launcher": "~1.1.0",
+    "karma-html2js-preprocessor": "~1.1.0",
+    "karma-jasmine": "~1.1.2",
+    "karma-phantomjs-launcher": "~1.0.4",
+    "karma-requirejs": "~1.1.0",
+    "karma-script-launcher": "~1.0.0",
+    "karma-spec-reporter": "0.0.32",
+    "load-grunt-tasks": "~4.0.0",
+    "mkdirp": "^0.5.0",
+    "requirejs": "^2.3.5"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-1q+07gqzUAS5erqQUXatWuQZ/0mhfF15ispwAmi6H38Mg5syE7P2r0HfH2LwlKlKuJcdLjfST/kISn0cn8PuDA==",
+    "shasum": "4139ea7f77c1d72cef25f6d0be9aed547cf784f2",
+    "tarball": "https://registry.npmjs.org/ng-image-input-with-preview/-/ng-image-input-with-preview-1.0.0.tgz",
+    "fileCount": 38,
+    "unpackedSize": 56368,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbOePBCRA9TVsSAnZWagAA4JQQAIVMbDQZBnhusVl5pDpw\nxHzUAY8WZ7QJU2ekZMhj/aSOg1Uu/WlkuqLuly7CwbVbUFixkBrfKG4jy2uW\nya1IhKR+Q0AESkioo0We2uG6f819HL4SRVi2hOtVO99e6wwzUkXSkgmfzapI\nHi/93CroUrwy72B9luBru3M3fjwvaYK4l8vlzIrgelGCacYxRv6jZz14bENv\nEWe2O6Lp7AHFJlXw5GHxdhEIMXNQs8bMEiCVZOliOtAbB+CYqjcV8tARlJ9/\nYHSqtGf2AaDWw297N/YNDQyktbSEQuDmOpQ3j4uQDPIdvsIUdqB/6rsk/Ebg\nWBCCWBtCELlDk9PTwDmceKZ/cwOJRXAcA45Pz4qc/5osSCVLBKSezXWQHksl\n0XxshYlkSkWqJoZd1hXE0/GjG86oqgtedTEnCRS4hv2uVpe0sPE0JazgLOHq\nbTUgxQ2o4Nm8vsoCxQD9MXoTydwdaETV2GmR4DwDoVE14RFZxQ9HEsDab31c\nqWZ9Sc3r7PO/W5aFmO8lKMcUGihOS0TBqUUXzCE+YoUFTeCKSYt3TbqPkb5w\nZt0U0jdDpno9JlOwmvRLgeAkQsiWyT8sHl6dzEWm63IxMBi2DsSKJyS8vcpN\nAA1iSb31cznvOLIXpck0llVj8S6aA6OVRSwGytv3O2qi88b1Hqaxp3HI7MNq\nhlmC\r\n=MMKl\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "gitHead": "6247398bf9599cb4a6fed8931872aadee00b1b9f",
+  "homepage": "https://github.com/deiwin/ngImageInputWithPreview",
+  "keywords": [
+    "directive",
+    "angular",
+    "file",
+    "image",
+    "input"
+  ],
+  "license": "MIT",
+  "main": "Gruntfile.js",
+  "maintainers": [
+    {
+      "name": "deiwin",
+      "email": "deiwin.sarjas@gmail.com"
+    }
+  ],
+  "name": "ng-image-input-with-preview",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deiwin/ngImageInputWithPreview.git"
+  },
+  "scripts": {
+    "build": "grunt && grunt build",
+    "test": "grunt test"
+  },
+  "version": "1.0.0"
+}

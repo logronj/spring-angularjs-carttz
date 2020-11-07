@@ -1,0 +1,83 @@
+<div class="container admin">
+	<!-- First Row -->
+	<div class="row pt-3">
+		<!-- First Column -->
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-body text-center">
+					<div style="max-width: 100px" class="container">
+						<img class="img-fluid rounded-circle" src="images/users.png" alt="user_icon" />
+					</div>
+					<h1>69</h1>
+					<h1 class="text-muted">Users</h1>
+				</div>
+			</div>
+		</div>
+		<!-- Second Column -->
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-body text-center">
+					<div style="max-width: 100px" class="container">
+						<img class="img-fluid rounded-circle" src="images/product.png" alt="product_icon" />
+					</div>
+					<h1>45</h1>
+					<h1 class="text-muted">Products</h1>
+				</div>
+			</div>
+		</div>
+		<!-- Third Column -->
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-body text-center">
+					<div style="max-width: 100px" class="container">
+						<img class="img-fluid" src="images/category.png" alt="category_icon" />
+					</div>
+					<h1>4</h1>
+					<h1 class="text-muted">Categories</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Second Row -->
+	<div class="row pt-3">
+		<!-- First Column -->
+		<div class="col-md-6">
+			<div class="card" data-toggle="modal" data-target="#addProductModal">
+				<div class="card-body text-center">
+					<div style="max-width: 100px" class="container">
+						<img class="img-fluid" src="images/add-product.png" alt="add-product-icon" />
+					</div>
+					<p>Click here to add new product</p>
+					<h1 class="text-muted">Add Product</h1>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Second Column -->
+		<div class="col-md-6">
+			<div class="card" data-toggle="modal" data-target="#addCategoryModal">
+				<div class="card-body text-center">
+					<div style="max-width: 100px" class="container">
+						<img class="img-fluid" src="images/add-category.png" alt="add-category-icon" />
+					</div>
+					<p>Click here to add new category</p>
+					<h1 class="text-muted">Add Category</h1>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="addCategoryModal" tabindex="-1" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+	<div ng-include="'admin/modal/add-category-modal.html'"></div>
+</div>
+
+<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+	<div ng-include="'admin/modal/add-product-modal.html'"></div>
+</div>

@@ -1,0 +1,39 @@
+<ng-form class="form-mycart" novalidate>
+    <div class="card col-md-4 offset-md-4 mt-4">
+        <div class="card-header text-center">Login </div>
+        <div class="card-body">
+            <div class="form-group"
+                ng-class="loginCtrl.showLoginFormErrorMessage && dataIsNullOrEmpty(loginCtrl.user.username) ? 'has-error' : ''">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" autocomplete="chrome-off" id="username"
+                    placeholder="Enter your username" ng-model="loginCtrl.user.username">
+                <div class="row p-md-0 m-md-0 element-error-message">
+                    <ul class="p-md-0 m-md-0">
+                        <li ng-if="dataIsNullOrEmpty(loginCtrl.user.username)" class="p-md-0 m-md-0">This field is
+                            required.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="form-group"
+                ng-class="loginCtrl.showLoginFormErrorMessage && dataIsNullOrEmpty(loginCtrl.user.password) ? 'has-error' : ''">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" autocomplete="new-password" id="password"
+                    placeholder="Enter your password" ng-model="loginCtrl.user.password">
+                <div class="row p-md-0 m-md-0 element-error-message">
+                    <ul class="p-md-0 m-md-0">
+                        <li ng-if="dataIsNullOrEmpty(loginCtrl.user.password)" class="p-md-0 m-md-0">This field is
+                            required.</li>
+                    </ul>
+                </div>
+                <small> <a href="#">Forgot Password ?</a> </small>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div>
+                <button class="btn btn-primary" ng-click="loginCtrl.login()">Login</button>
+                <small for="">New User ?<a href="#">Register</a></small>
+
+            </div>
+        </div>
+    </div>
+</ng-form>

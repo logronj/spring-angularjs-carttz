@@ -1,0 +1,130 @@
+<ng-form class="form-mycart" novalidate ng-init="adminCtrl.getCategories()">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Product</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Start Modal Body -->
+
+        <div class="col-md-12">
+          <div class="form-group" ng-class="((adminCtrl.showAddProductErrorMessage 
+        && dataIsNullOrEmpty(adminCtrl.product.title)) || adminCtrl.showProductAlreadyExist ? 'has-error' : '')">
+            <label for="title">Title</label> <input type="text" class="form-control" name="title" maxlength="20"
+              ng-model="adminCtrl.product.title" required capitalize />
+            <div class="row p-md-0 m-md-0 element-error-message">
+              <ul class="p-md-0 m-md-0">
+                <li ng-if="dataIsNullOrEmpty(adminCtrl.product.title)" class="p-md-0 m-md-0">This field
+                  is Required</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="form-group" ng-class="(adminCtrl.showAddProductErrorMessage 
+        && dataIsNullOrEmpty(adminCtrl.product.description) ? 'has-error': '')">
+            <label for="description">Description</label> <textarea type="text" class="form-control" name="description"
+              maxlength="30" ng-model="adminCtrl.product.description" required capitalize></textarea>
+            <div class="row p-md-0 m-md-0 element-error-message">
+              <ul class="p-md-0 m-md-0">
+                <li ng-if="dataIsNullOrEmpty(adminCtrl.product.description)" class="p-md-0 m-md-0">This
+                  field is Required</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="row col-md-12">
+          <div class="col-md-6">
+            <div class="form-group" ng-class="(adminCtrl.showAddProductErrorMessage 
+            && dataIsNullOrEmpty(adminCtrl.product.quantity) ? 'has-error': '')">
+              <label for="quantity">Quantity</label>
+              <input type="number" class="form-control" name="quantity" ng-model="adminCtrl.product.quantity" required
+                maxlength="10">
+              <div class="row p-md-0 m-md-0 element-error-message">
+                <ul class="p-md-0 m-md-0">
+                  <li ng-if="dataIsNullOrEmpty(adminCtrl.product.quantity)" class="p-md-0 m-md-0">
+                    This field is Required
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group" ng-class="(adminCtrl.showAddProductErrorMessage 
+            && dataIsNullOrEmpty(adminCtrl.product.price) ? 'has-error': '')">
+              <label for="quantity">Price</label>
+              <input type="text" class="form-control" name="price" ng-model="adminCtrl.product.price" ui-number-mask="2" maxlength="21"
+                required>
+              <div class="row p-md-0 m-md-0 element-error-message">
+                <ul class="p-md-0 m-md-0">
+                  <li ng-if="dataIsNullOrEmpty(adminCtrl.product.price)" class="p-md-0 m-md-0">
+                    This field is Required
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="form-group"
+            ng-class="(adminCtrl.showAddProductErrorMessage && dataIsNullOrEmpty(adminCtrl.product.category)) ? 'has-error': ''">
+            <label class="required">Category</label> <input type="text" class="form-control" name="caseClassification"
+              placeholder="-- SELECT --" autocomplete="off" typeahead-select-on-exact="true"
+              ng-model="adminCtrl.product.category" typeahead-on-select="adminCtrl.onSelectCaseSelection()"
+              ng-disabled=" " typeahead-editable="false" typeahead-min-length="0"
+              caret="adminCtrl.inputCaseClassification"
+              uib-typeahead="category as category.title for category in adminCtrl.categoryList | filter:$viewValue | orderBy:'title'" />
+            <span ng-class="dataIsNullOrEmpty(adminCtrl.product.category) 
+                ? 'typeahead-caret' : 'typeahead-clear'" ng-click="dataIsNullOrEmpty(adminCtrl.product.category) 
+                ? adminCtrl.inputAddCategory = true : adminCtrl.product.category = ''"></span>
+
+            <div class="row p-md-0 m-md-0 element-error-message">
+              <ul class="p-md-0 m-md-0">
+                <li ng-if="dataIsNullOrEmpty(adminCtrl.product.category)" class="p-md-0 m-md-0">This field is Required
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="form-group"
+            ng-class="(adminCtrl.showAddProductErrorMessage && (dataIsNullOrEmpty(adminCtrl.file) || adminCtrl.file == 'invalid')) ? 'has-error' : ''">
+            <label for="file" class="required">Photo</label>
+            <input type="file" id="file" name="signatureImage" class="form-control" data-file="adminCtrl.file"
+              ng-model="adminCtrl.file" file-upload />
+            <div class="row p-md-0 m-md-0 element-error-message">
+              <ul class="p-md-0 m-md-0">
+                <li ng-if="dataIsNullOrEmpty(adminCtrl.file)" class="p-md-0 m-md-0">
+                  This field is Required</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>Preview</label>
+          </div>
+          <div class="text-center img-container">
+            <img ng-if="!dataIsNullOrEmpty(adminCtrl.file)" file-preview="adminCtrl.file" height="100px">
+            <div ng-if="dataIsNullOrEmpty(adminCtrl.file)" class="pt-4">No Image Selected</div>
+          </div>
+        </div>
+
+        <!-- End Modal Body -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" ng-click="adminCtrl.saveProduct()" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</ng-form>

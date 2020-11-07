@@ -1,0 +1,163 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "angular-ui-grid@^4.0.7",
+        "scope": null,
+        "escapedName": "angular-ui-grid",
+        "name": "angular-ui-grid",
+        "rawSpec": "^4.0.7",
+        "spec": ">=4.0.7 <5.0.0",
+        "type": "range"
+      },
+      "C:\\ETISREPO\\dashboard\\dashboard-angular"
+    ]
+  ],
+  "_from": "angular-ui-grid@>=4.0.7 <5.0.0",
+  "_id": "angular-ui-grid@4.4.11",
+  "_inCache": true,
+  "_location": "/angular-ui-grid",
+  "_nodeVersion": "6.12.3",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/angular-ui-grid_4.4.11_1526515170884_0.5619697717534065"
+  },
+  "_npmUser": {
+    "name": "mportuga",
+    "email": "marceloquarion@gmail.com"
+  },
+  "_npmVersion": "6.0.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "angular-ui-grid@^4.0.7",
+    "scope": null,
+    "escapedName": "angular-ui-grid",
+    "name": "angular-ui-grid",
+    "rawSpec": "^4.0.7",
+    "spec": ">=4.0.7 <5.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-ui-grid/-/angular-ui-grid-4.4.11.tgz",
+  "_shasum": "bc0b3815b6bb6aaf4992a70ab6d26282a5a58728",
+  "_shrinkwrap": null,
+  "_spec": "angular-ui-grid@^4.0.7",
+  "_where": "C:\\ETISREPO\\dashboard\\dashboard-angular",
+  "bugs": {
+    "url": "https://github.com/angular-ui/ui-grid/issues"
+  },
+  "dependencies": {
+    "angular": ">=1.4.0 1.7.x"
+  },
+  "description": "A data grid for Angular",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-tOZrlgmmV8LXS5yDXxry53uibZxFOC3dNNUOH+5AA0SwVTg1B0rE4+4zdU7NfW6bKClshoPE7mik8/VrS1rXAQ==",
+    "shasum": "bc0b3815b6bb6aaf4992a70ab6d26282a5a58728",
+    "tarball": "https://registry.npmjs.org/angular-ui-grid/-/angular-ui-grid-4.4.11.tgz",
+    "fileCount": 142,
+    "unpackedSize": 3477181,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa/MXjCRA9TVsSAnZWagAAqvUP/2d0HowpWyNFv2ilpXbG\nDzPzyyWLk8m6dva7TX26BSPCjrWgIE7uLmP4880sX2ekDGbgzvdeWSsfgQDJ\nQ6x8BmQ13k4EJRvTG4+tqY0UHoBoa/pZVMNiXPWuJc7VIoJ/SgdUKJJXi1fS\niBt6flG0ZYlxbqTNug26aPJSlGA+ZcGod6G1kVDbfprEmN1Jj0ZyVcNFRjyw\nHedu3P0/1f7ZrXjyGQ2Aemd3v9Blax08kD4dQlE/E1/5GIJKe0Asu5z3Hd6H\np3kY/p9fXEPT/VVJlJagyIDTnjSRAIj0SMSW0s1t1oirf9OP53Hldq5yLe+x\nAeyTReoj4mFcoIWptmIO3ohEqjZM6ziSkWVrDFngrAK5kJV9oLCOqJVDoxe9\nmqMzM6ZtQbTGrefxdH4WUr3eR9mxvGMGd5LOFU3gd+ZV1wHPInQBgXSfYW9R\npSYkqImtoae49fSELn98LABQ19ip2Lzaz3R285PFWJf3RIKrd20go6h6gGsN\neTIwFgm2Ea0a9yyRhKDBprNqWd6jBheMOUNK2n3YwjovLLqd1qrHIS98mhYx\nQbi2mmFectixvjm869hXUgeaVyBEqE3TliwKr2oeXhSUIhr/KrSEza710xc9\nPmLb1HZXz6a7DT7I3E8b8ipPOKcLFtwAVSBINUncyBmggUonFS1b9TUvxRWg\nLtOr\r\n=kUFV\r\n-----END PGP SIGNATURE-----\r\n"
+  },
+  "files": [
+    "i18n",
+    "less",
+    "ui-grid.auto-resize.js",
+    "ui-grid.auto-resize.min.js",
+    "ui-grid.cellnav.js",
+    "ui-grid.cellnav.min.js",
+    "ui-grid.core.js",
+    "ui-grid.core.min.js",
+    "ui-grid.css",
+    "ui-grid.edit.js",
+    "ui-grid.edit.min.js",
+    "ui-grid.empty-base-layer.js",
+    "ui-grid.empty-base-layer.min.js",
+    "ui-grid.eot",
+    "ui-grid.expandable.js",
+    "ui-grid.expandable.min.js",
+    "ui-grid.exporter.js",
+    "ui-grid.exporter.min.js",
+    "ui-grid.grouping.js",
+    "ui-grid.grouping.min.js",
+    "ui-grid.importer.js",
+    "ui-grid.importer.min.js",
+    "ui-grid.infinite-scroll.js",
+    "ui-grid.infinite-scroll.min.js",
+    "ui-grid.js",
+    "ui-grid.min.css",
+    "ui-grid.min.js",
+    "ui-grid.move-columns.js",
+    "ui-grid.move-columns.min.js",
+    "ui-grid.pagination.js",
+    "ui-grid.pagination.min.js",
+    "ui-grid.pinning.js",
+    "ui-grid.pinning.min.js",
+    "ui-grid.resize-columns.js",
+    "ui-grid.resize-columns.min.js",
+    "ui-grid.row-edit.js",
+    "ui-grid.row-edit.min.js",
+    "ui-grid.saveState.js",
+    "ui-grid.saveState.min.js",
+    "ui-grid.selection.js",
+    "ui-grid.selection.min.js",
+    "ui-grid.svg",
+    "ui-grid.tree-base.js",
+    "ui-grid.tree-base.min.js",
+    "ui-grid.tree-view.js",
+    "ui-grid.tree-view.min.js",
+    "ui-grid.ttf",
+    "ui-grid.validate.js",
+    "ui-grid.validate.min.js",
+    "ui-grid.woff"
+  ],
+  "homepage": "http://ui-grid.info",
+  "ignore": [],
+  "keywords": [
+    "angular",
+    "ng-grid",
+    "nggrid",
+    "grid",
+    "angularjs",
+    "slickgrid",
+    "kogrid",
+    "ui-grid",
+    "ui grid",
+    "data grid"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "c0bra",
+      "email": "emailc0bra@gmail.com"
+    },
+    {
+      "name": "dlgski",
+      "email": "dana.greenberg@kronos.com"
+    },
+    {
+      "name": "jlleitschuh",
+      "email": "Jlleitschuh@wpi.edu"
+    },
+    {
+      "name": "mportuga",
+      "email": "marceloquarion@gmail.com"
+    },
+    {
+      "name": "swalters",
+      "email": "swalters@singletreetech.com"
+    }
+  ],
+  "name": "angular-ui-grid",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular-ui/ui-grid.git"
+  },
+  "version": "4.4.11"
+}

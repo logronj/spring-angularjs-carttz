@@ -1,0 +1,105 @@
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark" id="mainNav">
+    <a class="navbar-brand" href="#">
+        <img src="images/mycart.png" width="30" height="30" alt="" />
+        CartTz
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" ui-sref="mycart" ui-sref-opts="{reload: true}"> <i
+                        class="fa fa-fw fa-home"></i>
+                    Home
+                </a></li>
+            <li class="nav-item"><a class="nav-link" ui-sref="mycart.about"><i class="fa fa-fw fa-info"></i>
+                    About</a></li>
+            <li class="nav-item"><a class="nav-link" ui-sref="mycart.categories"><i class="fa fa-fw fa-info"></i>
+                    Categories</a></li>
+        </ul>
+
+        <!-- right navs -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" ui-sref="mycart.admin">
+                    <i class="fa fa-fw fa-user"></i> Admin Page
+                </a></li>
+
+            <li class="nav-item"><a class="nav-link" ui-sref="mycart.contact">
+                    <i class="fa fa-fw fa-list-alt"></i> Contact
+                </a></li>
+
+
+            <li ng-if="!dataIsNullOrEmpty(userInfo.name)" class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+                    href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"> <i class="fa fa-fw fa-user"></i>My
+                    Account
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-item disabled">
+                        <label class="pb-0 mb-0 etis-profile"> {{userInfo.name}} </label>
+                        <br> <label class="pb-0 mb-0 etis-profile">
+                            {{userInfo.office.description}} </label> <br> <label class="pb-0 mb-0 etis-profile">Last
+                            Login -
+                            {{userInfo.lastLogin | date:'dd MMMM yyyy hh:mm:ss a'}} </label>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item etis-profile" href="#" data-toggle="modal"
+                        ng-click="mainCtrl.showChangePasswordModal();">Change Password</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item etis-profile" href="#" data-toggle="modal"
+                        ng-click="mainCtrl.showLogoutModal();"> <i class="fa fa-fw fa-sign-out"></i>Logout
+                    </a>
+                </div>
+            </li>
+
+            <li ng-if="dataIsNullOrEmpty(userInfo.name)" class="nav-item"><a class="nav-link" ui-sref="mycart.login">
+                    <i class="fa fa-fw fa-sign-in"></i> Login
+                </a></li>
+
+        </ul>
+    </div>
+</nav>
+<main>
+    <toaster-container
+		toaster-options="{'time-out': 4000, 'close-button': true}"></toaster-container>
+    <div ui-view="">
+        <div class="row form-group">
+            <div class="col-md-8 offset-md-2 cart-bg-dtls">
+                <b>LOREM-IPSUM </b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque nec orci
+                ut sagittis.
+                Pellentesque tempor egestas pulvinar. In feugiat tellus sit amet dolor scelerisque, nec dignissim ipsum
+                facilisis.
+                Sed eu justo vitae leo ornare cursus sed ac odio. Ut vel augue ultrices nisl scelerisque sagittis at
+                quis nibh.
+                In id lorem id arcu mollis tempor eu vitae felis. Quisque porta erat ligula, ut malesuada lacus
+                elementum eu.<br />
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="page-footer bg-dark mt-auto">
+    <div class="bg-success">
+        <div class="container">
+            <div class="row py4 d-flex align-items-center">
+                <div class="col-md-12 text-center">
+                    <a href="#"><i class="fa fa-fw fa-facebook text-white mr-4"></i></a>
+                    <a href="#"><i class="fa fa-fw fa-twitter text-white mr-4"></i></a>
+                    <a href="#"><i class="fa fa-fw fa-google-plus text-white mr-4"></i></a>
+                    <a href="#"><i class="fa fa-fw fa-linkedin text-white mr-4"></i></a>
+                    <a href="#"><i class="fa fa-fw fa-instagram text-white"></i></a>
+                </div>
+                <div class="text-center">Copyright © 2020 @logronj. All rights reserved.</div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="loading" ng-show="isLoading">Loading&#8230;</div>
+
+<modal-dialog-xs show="mainCtrl.logoutModal">
+    <div ng-include="main/modal/logout.modal.html"></div>
+</modal-dialog-xs>
