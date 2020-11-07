@@ -12,8 +12,8 @@ import com.mycart.utils.ProductRequestWrapper;
 
 public interface ProductService extends CommonService<Product>{
 
-	public List<Product> getByCategoryId(Long id);
-
-	public Product insert(MultipartFile file, ProductRequestWrapper productWrapper) throws IOException;
+	List<Product> getByCategoryId(Long id);
+	Product insert(MultipartFile file, ProductRequestWrapper productWrapper) throws IOException;
+	Integer getCount();
 
 }

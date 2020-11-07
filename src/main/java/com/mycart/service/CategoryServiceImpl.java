@@ -46,4 +46,8 @@ public class CategoryServiceImpl implements CategoryService {
 		return categoryRepository.isExist(title);
 	}
 
+	@Override
+	public Integer getCount() {
+		return categoryRepository.getCount();
+	}
 }

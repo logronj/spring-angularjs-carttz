@@ -1,13 +1,23 @@
 'use strict';
 (function () {
-	angular.module('myCartApp').controller('AdminController', ['AdminServices', '$rootScope', 'Utilities',
-		function (AdminServices, $rootScope, Utilities) {
+	angular.module('myCartApp').controller('AdminController', ['AdminServices', '$rootScope', 'Utilities', '$q',
+		function (AdminServices, $rootScope, Utilities, $q) {
 			const self = this;
 			self.category = {};
 			self.product = {};
 			self.showAddCategoryErrorMessage = false;
 			self.showAddProductErrorMessage = false;
 			const invalid = 'invalid';
+
+			const initPage = () => {
+			    let product = AdminServices.getProductCount();
+			    let category = AdminServices.getCategoryCount();
+
+			    $q.all([product,category]).then(function(response){
+			        self.productCount = response[0].data;
+			        self.categoryCount = response[1].data;
+			    })
+			}
 
 			self.getCategories = () =>{
 				 AdminServices.getCategories().then(function(response){
@@ -23,6 +33,7 @@
 					AdminServices.saveCategory(self.category).then(function (response) {
                         self.closeCategoryModal();
 						Utilities.popSuccess('Successfully saved Category');
+						self.categoryCount++;
 					}).catch(function (e) {
 						Utilities.popError(e.data.message);
 					})
@@ -36,6 +47,7 @@
 					AdminServices.saveProduct(self.file,self.product).then(function (response) {
 					    self.closeProductModal();
 						Utilities.popSuccess('successfully saved Product');
+						self.productCount++;
 					}).catch(function (e) {
 						Utilities.popError(e.data.message);
 					})
@@ -71,6 +83,8 @@
 			    self.showAddCategoryErrorMessage = false;
 			    $('#addCategoryModal').modal('hide');
 			}
+
+			initPage();
 
 		}]);
 })();

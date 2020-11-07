@@ -3,8 +3,10 @@
     angular.module('myCartApp').factory('AdminServices',['$http','apiConfig',function($http,apiConfig){
         const service = {
             saveProduct : saveProduct,
+            getProductCount : getProductCount,
             saveCategory : saveCategory,
-            getCategories : getCategories
+            getCategories : getCategories,
+            getCategoryCount : getCategoryCount
         }
 
         function saveProduct(file,requestBody) {
@@ -31,6 +33,14 @@
 
         function getCategories(){
             return $http.get(apiConfig.API_MYCART_URL_GET_ALL_CATEGORY);
+        }
+
+        function getProductCount(){
+            return $http.get(apiConfig.API_MYCART_URL_GET_PRODUCT_COUNT);
+        }
+
+        function getCategoryCount(){
+            return $http.get(apiConfig.API_MYCART_URL_GET_CATEGORY_COUNT);
         }
 
         return service;

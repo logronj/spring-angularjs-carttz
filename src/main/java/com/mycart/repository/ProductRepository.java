@@ -9,5 +9,5 @@ import com.mycart.utils.CommonService;
 public interface ProductRepository extends CommonService<Product> {
 
 	public List<Product> getByCategoryId(Long id);
-
+    Integer getCount();
 }

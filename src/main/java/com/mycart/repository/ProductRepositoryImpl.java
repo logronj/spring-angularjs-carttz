@@ -33,7 +33,7 @@ public class ProductRepositoryImpl implements ProductRepository {
 	@Override
 	public List<Product> getAll() {
 		String query = "Select a from Product a";
-		TypedQuery<Product> typedQuery = entityManager.createQuery(query,Product.class);
+		var typedQuery = entityManager.createQuery(query,Product.class);
 		return typedQuery.getResultList();
 	}
 
@@ -46,7 +46,7 @@ public class ProductRepositoryImpl implements ProductRepository {
 	public boolean isExist(String title) {
 		String query = "Select CASE when(count(a) > 0) then true else false END from Product a " +
 				"WHERE UPPER(a.title) = UPPER(?1)";
-		TypedQuery<Boolean> typedQuery = entityManager.createQuery(query,Boolean.class);
+		var typedQuery = entityManager.createQuery(query,Boolean.class);
 		typedQuery.setParameter(1,title);
 		return typedQuery.getSingleResult();
 	}
@@ -54,11 +54,17 @@ public class ProductRepositoryImpl implements ProductRepository {
 	@Override
 	public List<Product> getByCategoryId(Long id) {
 		String query = "Select a from Product a WHERE a.category.id = ?1";
-		TypedQuery<Product> typedQuery = entityManager.createQuery(query,Product.class);
+		var typedQuery = entityManager.createQuery(query,Product.class);
 		typedQuery.setParameter(1, id);
 		return typedQuery.getResultList();
 	}
-	
-	
-	
+
+	@Override
+	public Integer getCount() {
+		String query = "Select count(a) from Product a";
+		var typedQuery = entityManager.createQuery(query,Long.class);
+		return typedQuery.getSingleResult().intValue();
+	}
+
+
 }

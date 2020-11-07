@@ -54,4 +54,10 @@ public class CategoryRepositoryImpl implements CategoryRepository {
 		return typedQuery.getSingleResult();
 	}
 
+    @Override
+    public Integer getCount() {
+        String query = "Select count(a) from Category a";
+        var typedQuery = entityManager.createQuery(query,Long.class);
+        return typedQuery.getSingleResult().intValue();
+    }
 }

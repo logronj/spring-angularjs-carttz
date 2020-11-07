@@ -43,6 +43,11 @@ public class ProductServiceImpl implements ProductService {
 		}
 	}
 
+	@Override
+	public Integer getCount() {
+		return productRepository.getCount();
+	}
+
 	private Product buildProduct(MultipartFile file, ProductRequestWrapper productWrapper) throws IOException {
 		var category = new Category(productWrapper.getCategory());
 		var product = new Product(productWrapper.getTitle(),productWrapper.getDescription(),productWrapper.getPrice(),
