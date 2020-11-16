@@ -12,6 +12,8 @@
         'API_MYCART_URL_SAVE_PRODUCT' :'/mycart/products/insert',
         'API_MYCART_URL_UPDATE_PRODUCT' :'/mycart/products/update',
         'API_MYCART_URL_GET_PRODUCT_BY_CATEGORY_ID' : '/mycart/products/getByCategoryId/',
-        'API_MYCART_URL_GET_PRODUCT_COUNT' : '/mycart/products/count'
+        'API_MYCART_URL_GET_PRODUCT_COUNT' : '/mycart/products/count',
+
+        'API_MYCART_URL_GET_USERS_COUNT' : '/mycart/users/user-count'
     });
 })();

@@ -4,10 +4,10 @@ import java.util.List;
 
 public interface CommonService<T> {
 
-	public T insert(T entity);
-	public T update(T entity);
-	public List<T> getAll();
-	public T getById(Long id);
-	public boolean isExist(String title);
+	T insert(T entity);
+	T update(T entity);
+	List<T> getAll();
+	T getById(Long id);
+	boolean isExist(String title);
 	
 }

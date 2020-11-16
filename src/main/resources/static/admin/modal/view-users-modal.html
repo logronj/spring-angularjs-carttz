@@ -1,0 +1,26 @@
+<ng-form class="form-mycart" novalidate>
+    <div class="modal-dialog modal-lg">
+       
+        <div class="modal-content">
+            <div class="modal-header">
+				<h5 class="modal-title">View Users</h5>
+			</div>
+            <!-- TABLE -->
+            <div class="modal-body">
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <div ui-grid="adminCtrl.userGrid" ui-grid-selection ui-grid-auto-resize
+                            ui-grid-pagination ui-grid-exporter class="grid">
+                            <span ng-if="adminCtrl.userGrid.data.length == 0"
+                                class="watermark">{{adminCtrl.noItems}} </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" ng-click="adminCtrl.closeUserModal()">Close</button>
+			</div>
+        </div>
+    </div>
+
+</ng-form>

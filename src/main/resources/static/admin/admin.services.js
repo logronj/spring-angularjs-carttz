@@ -6,7 +6,8 @@
             getProductCount : getProductCount,
             saveCategory : saveCategory,
             getCategories : getCategories,
-            getCategoryCount : getCategoryCount
+            getCategoryCount : getCategoryCount,
+            getUsersCount : getUsersCount
         }
 
         function saveProduct(file,requestBody) {
@@ -42,6 +43,11 @@
         function getCategoryCount(){
             return $http.get(apiConfig.API_MYCART_URL_GET_CATEGORY_COUNT);
         }
+
+        function getUsersCount(){
+            return $http.get(apiConfig.API_MYCART_URL_GET_USERS_COUNT);
+        }
+        
 
         return service;
     }]);
